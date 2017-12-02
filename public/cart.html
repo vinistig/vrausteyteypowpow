@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		
+		<script>
+			$(function(){
+				$("#btn-calcular-frete").on('click',function(){
+					var frete = $("#txt-frete").val();
+					console.log(frete);
+					if(frete != "" || frete !=null)
+						$("#div-valor-frete").fadeIn("slow");
+					else
+						alert("Calcule o frete...");
+
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h4>Logo</h4>
+				</div>
+				<div class="col-md-8">
+					<div class="span2">
+						Sei lá o que por kkk
+					</div>
+				</div>
+			</div>
+			<br />
+			<div class="row">
+				<h1>Carrinho</h1>
+				<div class="table-responsive">
+					<table class="table table-bordered table-striped">
+						<thead>
+							<tr>
+								<th>Remover</th>
+								<th>Imagem</th>
+								<th>Produto</th>
+								<th>Preço</th>
+								<th>Quantidade</th>
+								<th>Total(R$)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>
+									<img src="http://wbpreview.com/previews/WB00223R0/css/images/macbook-pro.jpg" />
+								</td>
+								<td>Mac book</td>
+								<td>R$5.000,00</td>
+								<td><input type="number" class="form-control" value="1" min="1" /></td>
+								<td>R$5.000,00</td>
+							</tr>
+							<tr>
+								<th colspan="6"style="text-align:right">R$5.000,00</th>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card" style="width: 20rem;">
+					  <div class="card-body">
+						<h4 class="card-title">Calculo de frete</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Digite seu frete :)</h6>
+						<input type="text" class="form-control"id="txt-frete"/>
+						<br />
+						<button class="btn btn-primary" id="btn-calcular-frete">Calcular
+						</div>
+				    </div>
+				</div>
+				<div class="col-md-4" id="div-valor-frete" hidden>
+					<div class="card"style="width: 20rem;">
+						<div class="card-body">
+						<h4 class="card-title">Valores</h4>
+							<p><input type="radio" /> Sedex - R$10,90</p>
+							<p><input type="radio" /> Sedex 10 - R$20,90</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card" style="width: 20rem;">
+					  <div class="card-body">
+						<h4 class="card-title">Finalizar compra</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Finalize a compra e seja feliz :)</h6>
+						<br />
+						<input type="checkbox"> Entrega certa
+						<div class="clearfix"></div>
+						<a href="finalizarPedido.html">
+							<button class="btn btn-success">Finalizar </div>
+						</a>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
